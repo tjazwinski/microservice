@@ -9,6 +9,6 @@ public class RestService {
 
 	@RequestMapping("/hello")
 	public String hello() {
-		return "hello world8";
+		return "hello world40";
 	}
 }
