@@ -15,6 +15,6 @@ public class RestService {
 	@RequestMapping("/hello")
 	public String hello() {
 		logger.log(Level.INFO, "hello world");
-		return "hello world";
+		return "hello world2";
 	}
 }
