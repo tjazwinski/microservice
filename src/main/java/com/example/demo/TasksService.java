@@ -16,15 +16,16 @@ import com.example.demo.jpa.TaskRepository;
 
 @RestController
 @RequestMapping("/tasks")
-public class RestService {
+public class TasksService {
 
-	Logger logger = Logger.getLogger(RestService.class.getCanonicalName());
+	Logger logger = Logger.getLogger(TasksService.class.getCanonicalName());
 
 	@Autowired
 	private TaskRepository taskRepository;
 
 	@GetMapping("/list/{userId}")
 	public List<Task> getTasks(@PathVariable Long userId) {
+		logger.info("Pobieram liste taskow : " + userId);		
 		return taskRepository.findByUserId(userId);
 	}
 
